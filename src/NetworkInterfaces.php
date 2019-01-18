@@ -119,8 +119,10 @@ class NetworkInterfaces
      */
     private function _addAdaptor($adaptor)
     {
-        if (!array_key_exists($adaptor, $this->Adaptors)) $this->Adaptors[$adaptor] = new Adaptor();
-        $this->Adaptors[$adaptor]->auto = false;
+        if (!array_key_exists($adaptor, $this->Adaptors)) {
+            $this->Adaptors[$adaptor] = new Adaptor();
+            $this->Adaptors[$adaptor]->auto = false;
+        }
     }
 
     /**
